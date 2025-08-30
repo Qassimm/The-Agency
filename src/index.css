@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *)); 
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500 ;
+  cursor: none;
+}
+
+
+@theme {
+  --color-primary: #5044e5 ;
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center ;
+}
+
+@utility col-center {
+  @apply flex flex-col  items-center ;
+}
+
+@utility navbar-wrapper {
+  @apply flex justify-between items-center px-4 sm:px-12
+   lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl 
+   font-medium bg-white/50 dark:bg-gray-900/70 duration-300 ;
+}
+
+@utility nav-container {
+  @apply text-gray-700 dark:text-white sm:text-sm 
+   max-sm:fixed top-0 bottom-0 right-0 max-sm:min-h-screen 
+   max-sm:h-full max-sm:flex-col max-sm:bg-primary 
+   max-sm:text-white max-sm:pt-20 flex sm:items-center 
+   gap-5 transition-all duration-300 ;
+}
+
+@utility nav {
+  @apply sm:hover:border-b cursor-pointer ;
+}
+
+@utility contact-btn {
+  @apply text-sm max-sm:hidden flex items-center gap-2
+  bg-primary text-white px-6 py-2 rounded-full 
+  cursor-pointer hover:translate-x-1 duration-300 ;
+}
+
+@utility hero-section {
+  @apply col-center gap-6 py-20 px-4 sm:px-12 
+  dark:text-white duration-300 ;
+}
+
+@utility group-container {
+  @apply inline-flex items-center gap-2 border
+   border-gray-300 p-1.5 pr-4 rounded-full ;
+}
+
+@utility heading {
+  @apply text-4xl sm:text-5xl md:text-6xl xl:text-[84px] 
+  font-medium xl:leading-[95px] max-w-5xl text-center ;
+}
+@utility colored-heading{
+  @apply bg-gradient-to-r from-[#5044E5] to-[#4D8CEA] 
+  bg-clip-text text-transparent ;
+}
+
+@utility hero-description {
+  @apply text-sm sm:text-lg font-medium  text-gray-500 
+  dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3 text-center ;
+}
+
+@utility service-box{
+  @apply relative  col-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 
+  pt-30 text-gray-700 dark:text-white ;
+}
+
+@utility service-card-section{
+  @apply relative overflow-hidden max-w-lg m-2 sm:m-4 rounded-xl border
+  border-gray-200 dark:border-gray-700 shadow-2xl shadow-gray-100
+  dark:shadow-white/10 ;
+}
+
+@utility service-card-container{
+  @apply pointer-events-none blur-2xl rounded-full bg-gradient-to-r 
+  from-blue-500 via-indigo-500 to-purple-500 w-[300px] h-[300px] 
+  absolute z-0 transition-opacity duration-500 mix-blend-lighten ;
+}
+
+@utility card-content{
+  @apply flex items-center gap-10 p-8 hover:p-7.5 hover:m-0.5 
+  transition-all rounded-[10px] bg-white dark:bg-gray-900 
+  z-10 relative ;
+}
+
+@utility work-section{
+  @apply col-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 
+  text-gray-700 dark:text-white ;
+}
+
+@utility team-section{
+  @apply col-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 
+  text-gray-700 dark:text-white ;
+}
+
+@utility contact-section{
+  @apply col-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 
+  text-gray-700 dark:text-white ;
+}
+
+@utility team-card{
+  @apply flex max-sm:flex-col items-center gap-5 p-4 rounded-xl 
+  border border-gray-100 dark:border-gray-700 bg-white 
+  dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 
+  hover:scale-105 transition-all duration-400 ;
+}
+
+@utility footer{
+  @apply bg-slate-50 dark:bg-gray-900 pt-10 sm:pt-10 mt-20 
+  sm:mt-40 px-4 sm:px-10 lg:px-24 xl:px-40 ;
+}
+
+@utility footer-input{
+  @apply w-full p-3 outline-none border border-gray-300 
+  dark:border-gray-500 rounded text-sm dark:text-gray-200
+  bg-transparent ;
+}
+
+@utility copyRight-message-container{
+  @apply pb-6 text-sm text-gray-500 flex justify-center 
+  sm:justify-between gap-4 flex-wrap ;
+}
+
+/* customized cursor  */
+
+@utility ring {
+  @apply fixed top-0 left-0 h-10 w-10 rounded-full border
+  border-primary pointer-events-none z-[9999] ;
+}
+
+@utility dot {
+  @apply fixed top-0 left-0 w-3 h-3 rounded-full bg-primary pointer-events-none z-[9999]
+}
+
+
+
+/* logos auto scroll animation */
+
+.logo-strip {
+  overflow: hidden;
+  position: relative;
+  width: 70%;
+}
+
+.logo-track {
+  display: flex;
+  gap: 40px;
+  animation: scroll-logos 15s linear infinite;
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
