@@ -1,6 +1,6 @@
 import React from 'react'
 import assets from '../assets/assets'
-import TrustedBy from './trustedBy'
+import TrustedBy from './TrustedBy'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from "gsap/SplitText";
